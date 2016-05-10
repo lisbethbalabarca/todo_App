@@ -1,40 +1,70 @@
 *{
-	font-family: 'Annie Use Your Telescope', cursive;
+	font-family: 'ABeeZee', sans-serif;
 }
-h1{
-	background-color: #043347;
-	padding: 2%;
+.title {
+	width: 100%;	
+	position: fixed;
+  	border-bottom: 2px solid #FF0040;
+}
+
+.titulo {
+  	background-color: #FF0040;
+  	padding: 1%;
+  	color: #fff;
+  	font-weight: bold;
+  	font-size: 30px;
+  	border-bottom: 2px solid #FF0040;
+}
+
+.box {
+	padding: 2% 10%;
+}
+
+.agregar{
+  	margin: 2% 0;
+  	background-color: #FF0040;
+  	border: none;
+  	color: #fff;
+}
+.agregar:hover{
+	background: transparent;
+	border:solid #ff0040 2px;
+	color:#ff0040;
 	font-weight: bold;
-	color: #fff;
 }
-textarea{
-	width: 100%;
-	border-radius: 10px;
-	border: 1px solid #043347;
+
+#texto {
+	padding: 22% 10% 10%;
 }
-::-webkit-input-placeholder{
-	color: #043347;
-	font-size: 20px;
-	font-weight: bold;
-	padding-left: 5px;
+
+.list-work{
+	margin-top: 3px;
+  	padding: 2%;
+  	background-color: #FE2E64;
+  	color: #fff;
 }
-button{
-	margin-top: 15px;
-	border: solid 2px #043347;
-	background: none; 
-	padding:1%;
-	border-radius: 8px;
-	font-weight: bold;
+.list-work:first-child{
+	 margin-top: 15%;
 }
-button span{
-	margin-right: 10px;
+.nota {
+ 	margin-left: 2%;
 }
-button:hover{
-	background-color: #043347;
-	color:#fff;
+
+.list-work button {
+	float: right;
+	background-color: #fff;
+  	border:none;
+  	border-radius: 5px;
 }
-.tarea{
-	border:solid black 4px;
-	padding: 2%;
-	margin-top: 10px;
+.list-work button i{
+	color: #ff0040;
+}
+.glyphicon{
+	top: 2px;
+}
+
+@media (max-width: 400px) {
+  #texto {
+    padding: 40% 10% 10%;
+  }
 }

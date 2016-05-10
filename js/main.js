@@ -1,49 +1,51 @@
-window.addEventListener("load", init);
- 
-var todos = [];
- 
-function init()
-{
-	var add = document.querySelector("#add");
-	add.addEventListener("click", addTodo);
+function getInputValue(){
+	var inputBox= document.getElementById("text-box");
+	return inputBox.value;
 }
- 
-function addTodo(event)
-{
-	if(document.querySelector("#todo").value === "") return;
-	var li = 
-	{
-		index: todos.length + 1,
-		value: document.querySelector("#todo").value
-	};
-	todos.push(li);
-	displayTodos(li);
+
+function tarea(){
+	var inputBoxValue= getInputValue();
+	if(inputBoxValue!== ""){
+		doTarea(inputBoxValue);
+		clean();
+	}
 }
- 
-function displayTodos(li)
-{
-    var node = document.createElement("li");  
-    node.classList.add("col-md-12","tarea");   
-    node.id = "todo"+li.index;
-	var textnode = document.createTextNode(li.value);    
-	node.appendChild(textnode);   
-	document.querySelector("#todoList").appendChild(node); 
-	document.querySelector("#todo").value = "";
-	var deleteButton = createButton(li);
-    node.appendChild(deleteButton);
+
+ function doTarea(texto){
+ 	// texto
+ 	var notas= document.getElementById("texto");
+ 	//crear elementos
+ 	var caja= document.createElement("div");
+ 	caja.className="list-work";
+ 	var elemento= document.createElement("span")
+ 	elemento.className="nota";
+ 	elemento.innerHTML= texto;
+ 	//boton
+ 	var boton= document.createElement("button");
+ 	var icon= document.createElement("i");
+ 	icon.className="glyphicon glyphicon-trash";
+ 	boton.onclick= function(){
+ 		notas.removeChild(caja);
+ 	}
+ 	//checkbox
+ 	var check= document.createElement('input');
+ 	check.type = 'checkbox';
+ 	check.onchange= function(){
+ 		if(check.checked==true)
+ 			elemento.innerHTML=texto.strike();
+ 		else
+ 			elemento.innerHTML=texto;
+ 	}
+
+ 	boton.appendChild(icon);
+	caja.appendChild(elemento);
+ 	caja.insertBefore(check,elemento);
+	caja.appendChild(boton);
+	notas.appendChild(caja);
 }
- 
-function createButton(li){
-	var todo = document.createElement("input");
-    todo.type = "button";
-    todo.style.float = "right";
-    todo.value = "Eliminar";
-    todo.style.marginTop = "-7px";
-    todo.classList.add("removeTodo", "btn", "btn-danger");
-    todo.onclick = function() 
-    { 
-        var toDelete = document.querySelector('#todo'+li.index);
-		toDelete.parentNode.removeChild(toDelete);
-    };
-    return todo;
+
+function clean() {
+	var inputBox = document.getElementById("text-box");
+	inputBox.value = "";
+	inputBox.focus();
 }
