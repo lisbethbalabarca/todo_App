@@ -14,7 +14,7 @@ function item(){
  function doItem(texto){
  	var tareas= document.getElementById("texto");
  	var caja= document.createElement("div");
- 	caja.className="list-work";
+ 	caja.className="list-work col-sm-12";
  	var elemento= document.createElement("span")
  	elemento.className="tarea";
  	elemento.innerHTML= texto;
@@ -27,6 +27,7 @@ function item(){
  	}
  	var check= document.createElement('input');
  	check.type = 'checkbox';
+ 	check.className = "check"
  	check.onchange= function(){
  		if(check.checked==true)
  			elemento.innerHTML=texto.strike();
