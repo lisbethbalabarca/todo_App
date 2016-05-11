@@ -4,22 +4,34 @@
   <meta charset="UTF-8">
   <title>TODO Application</title>
   <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <div class="title">
-    <div class="titulo text-center">TODO APP</div>
-    <div class="box">
-      <textarea name="message" id="text-box" class="form-control" rows="5" placeholder = "Planes para después?"></textarea>
-      <button type="button" class="btn agregar" onclick="tarea()">+ Añadir tarea</button>
+  <header>
+    <div class="titulo text-center col-sm-12">
+      TODO APP
+    </div>
+    <div class="caja_tarea">
+      <textarea name="message" id="homework" class="form-control" rows="4" placeholder = "Planes para después?"></textarea>
+      <button type="button" class="btn agregar" onclick="item()"><span class="glyphicon glyphicon-time"></span> Añadir tarea</button>
     </div>  
-  </div>
-  <div id="texto">
-  </div>
+  </header>
+  <section class="contenedor">
+    <div id="texto">
+    </div>
+  </section>
   <script src="js/main.js"></script>
 </body>
 </html>
-<!--full = todo
-add = agregar
-#todolist = lista-->
+<!--<header>
+    <div class="titulo text-center">TODO APP</div>
+    <div class="box">
+      <textarea name="message" id="homework" class="form-control" rows="5" placeholder = "Planes para después?"></textarea>
+      <button type="button" class="btn agregar" onclick="item()"><span class="glyphicon glyphicon-time"></span> Añadir tarea</button>
+    </div>  
+  </header>  
+  <section class="tarea">
+    <div id="texto">
+    </div>
+  </section-->

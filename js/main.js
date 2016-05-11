@@ -1,33 +1,30 @@
 function getInputValue(){
-	var inputBox= document.getElementById("text-box");
+	var inputBox= document.getElementById("homework");
 	return inputBox.value;
 }
 
-function tarea(){
+function item(){
 	var inputBoxValue= getInputValue();
 	if(inputBoxValue!== ""){
-		doTarea(inputBoxValue);
+		doItem(inputBoxValue);
 		clean();
 	}
 }
 
- function doTarea(texto){
- 	// texto
- 	var notas= document.getElementById("texto");
- 	//crear elementos
+ function doItem(texto){
+ 	var tareas= document.getElementById("texto");
  	var caja= document.createElement("div");
  	caja.className="list-work";
  	var elemento= document.createElement("span")
- 	elemento.className="nota";
+ 	elemento.className="tarea";
  	elemento.innerHTML= texto;
- 	//boton
  	var boton= document.createElement("button");
  	var icon= document.createElement("i");
  	icon.className="glyphicon glyphicon-trash";
  	boton.onclick= function(){
- 		notas.removeChild(caja);
+ 		alert("estas seguro de querer eliminarlo");
+ 		tareas.removeChild(caja);
  	}
- 	//checkbox
  	var check= document.createElement('input');
  	check.type = 'checkbox';
  	check.onchange= function(){
@@ -41,7 +38,7 @@ function tarea(){
 	caja.appendChild(elemento);
  	caja.insertBefore(check,elemento);
 	caja.appendChild(boton);
-	notas.appendChild(caja);
+	tareas.appendChild(caja);
 }
 
 function clean() {

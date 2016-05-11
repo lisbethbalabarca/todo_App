@@ -1,25 +1,30 @@
 *{
 	font-family: 'ABeeZee', sans-serif;
 }
-.title {
-	width: 100%;	
+body{
+	overflow-y:hidden; 
+}
+header {
 	position: fixed;
-  	border-bottom: 2px solid #FF0040;
+	width: 100%;	
+	height: 300px;
+  border-bottom: 2px solid #FF0040;
+  background-color: #fff;
+  z-index: 11;
 }
-
 .titulo {
-  	background-color: #FF0040;
-  	padding: 1%;
-  	color: #fff;
-  	font-weight: bold;
-  	font-size: 30px;
-  	border-bottom: 2px solid #FF0040;
+  background-color: #FF0040;
+  padding: 1%;
+  color: #fff;
+  font-weight: bold;
+  font-size: 60px;
+  border-bottom: 2px solid #FF0040;
+  padding: 8%;
+  margin-bottom: 3%;
 }
-
-.box {
-	padding: 2% 10%;
+.caja_tarea {
+	padding: 2% 5%;
 }
-
 .agregar{
   	margin: 2% 0;
   	background-color: #FF0040;
@@ -32,19 +37,29 @@
 	color:#ff0040;
 	font-weight: bold;
 }
-
 #texto {
-	padding: 22% 10% 10%;
+	padding: 0% 10% 10%;
+	overflow: scroll;
+	overflow-x: hidden;
+	height: 800px;
 }
-
+::-webkit-scrollbar{
+  width: 10px;
+  background: #EEEEEE;
+}
+::-webkit-scrollbar-track{
+  background:#FEFEFE;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #FF0040;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
 .list-work{
 	margin-top: 3px;
   	padding: 2%;
   	background-color: #FE2E64;
   	color: #fff;
-}
-.list-work:first-child{
-	 margin-top: 15%;
 }
 .nota {
  	margin-left: 2%;
@@ -62,9 +77,14 @@
 .glyphicon{
 	top: 2px;
 }
-
-@media (max-width: 400px) {
-  #texto {
-    padding: 40% 10% 10%;
-  }
+.contenedor{
+	padding-top: 300px;
+}
+.content{
+	border: solid black 2px;
+}
+.form-control{
+  width: 100%;
+  border: solid red 2px;
+  background-image: url("image/fondo.jpg"); 
 }
